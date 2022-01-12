@@ -31,7 +31,7 @@ catch (Exception e)
     return;
 }
 
-var res = await conn.SearchAsync(baseDN, LdapConnection.ScopeSub, filter, attrs, false);
+var res = await conn.SearchAsync(baseDN, LdapConnection.ScopeSub, filter, null, false);
 
 await res.ForEachAsync((entity) =>
 {
@@ -42,5 +42,3 @@ await res.ForEachAsync((entity) =>
 });
 
 conn.Disconnect();
-
-
