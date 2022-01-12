@@ -14,7 +14,7 @@ try
     await conn.ConnectAsync(ldapHost, port);
     await conn.BindAsync(bindDN, password);
     Console.WriteLine(" Bind Successfull");
-    conn.Disconnect();   
+    conn.Disconnect();
 }
 catch (LdapException e)
 {
